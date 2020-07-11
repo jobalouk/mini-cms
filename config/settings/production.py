@@ -10,4 +10,5 @@ ALLOWED_HOSTS = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://claurian.herokuapp.com',
+    'https://serene-wilson-678825.netlify.app',
 ]
