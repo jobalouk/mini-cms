@@ -1,8 +1,8 @@
 export function getEntry(params) {
-  const from = `https://claurian.herokuapp.com/api/v1/entry/${params}/`
-  // const from = `http://localhost:8000/api/v1/entry/${params}/`
+  const url = `https://claurian.herokuapp.com/api/v1/entry/${params}/`
+  // const url = `http://localhost:8000/api/v1/entry/${params}/`
   return (
-    fetch(from).then(resp => {
+    fetch(url).then(resp => {
       return (
         resp.json().then(data => data)
       )
@@ -12,13 +12,34 @@ export function getEntry(params) {
 
 
 export function getEntries() {
-  const from = `https://claurian.herokuapp.com/api/v1/entries/`
-  // const from = `http://localhost:8000/api/v1/entries/`
+  const url = `https://claurian.herokuapp.com/api/v1/entries/`
+  // const url = `http://localhost:8000/api/v1/entries/`
   return (
-    fetch(from).then(resp => {
+    fetch(url).then(resp => {
       return (
         resp.json().then(data => data)
       )
     })
   )
+}
+
+
+export function request(url, params) {
+  if (params) {
+    url += params
+  }
+
+  return (
+    fetch(url).then(resp => {
+      return (
+        resp.json().then(data => data)
+      )
+    })
+  )
+}
+
+
+export async function fetchData(action, url, params) {
+  const data = await request(url, params)
+  action(data)
 }
