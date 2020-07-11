@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One:400,500,700&display=fallback');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=fallback');
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+main {
+  width: 700px;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
+.title {
+  font-family: 'Hammersmith One';
+  font-size: 50px;
+  margin-bottom: 32px;
+}
+
+.excerpt-title {
+  font-family: 'Hammersmith One';
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding: 0;
+  list-style: None;
+}
+
+.date::first-letter {
+  text-transform: uppercase;
+}
+
+.date {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.excerpt-content p {
+  margin-top: 9px;
+}
+
+.excerpt-wrapper {
+  display: flex;
+  align-items: baseline;
+}
