@@ -5,7 +5,6 @@ from .common import *
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    # Maybe not that host when deployed on netlify
     'claurian.herokuapp.com',
 ]
 
