@@ -18,7 +18,7 @@ export default function Home() {
         return (
           <li className="list-unstyled">
             <h2 className="excerpt-title">
-              <Link to={{pathname: x.slug}}>
+              <Link to={x.slug}>
                 {x.title}
               </Link>
             </h2>
