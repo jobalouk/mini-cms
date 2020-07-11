@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>site</title>
+    <link href="{% static "style.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>{{ entry.title }}</h1>
+      {{ entry.content }}
+    </main>
+  </body>
+</html>

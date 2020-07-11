@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>site</title>
+    <link href="{% static "style.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>Blog de Claude Laurian.</h1>
+      <p>Je réponds à vos questions.</p>
+      <ul class="entries">
+        {% for entry in entries %}
+        <li class="entry-excerpt">
+          <h2 class="reset-marge">
+            {{ entry.title }}
+          </h2>
+          <p class="reset-marge font-14">{{ entry.date_created }}</p>
+          <p>{{ entry.excerpt }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </main>
+  </body>
+</html>
